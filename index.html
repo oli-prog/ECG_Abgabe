@@ -620,21 +620,13 @@
         u_diffuse: 0.9,
         u_specular: 0.15,
         u_shininess: 128,
-        // u_reflectionIntensity: 1,
-        // u_lightColor: [0.6705882353, 0.1450980392, 0.1411764706],
         u_lightColor: [1.0,1.0,1.0],
-        // u_color: [0.1568627451, 0.4470588235, 0.2],
-        // u_texShadow: 0,
-        // u_skybox: 1,
         u_texDiffuse: 0,
         u_texSpecular: 1,
         u_texNormal: 2,
         u_texShadow: 3,
-        // u_texDepth: 3,
     });
 
-
-    // const pebbelGeo = await glance.loadObj('/objects/riverbed.obj');
     const terrainGeo = glance.createPlane("terrain-geo", {
         width: terrainSize,
         height: terrainSize,
@@ -678,7 +670,6 @@
             [1, terrainTextureSpecular],
             [2, terrainTextureNormal],
             [3, shadowDepthTexture],
-            // [3, pebbelTextureDepth]
         ],
         cullFace: gl.BACK,
         depthTest: gl.LESS,
